@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js" defer></script>
+    <title>Ulam Generator</title>
+</head>
+<body onload="draw()">
+    <section>
+        <h1>Grille d'Ulam avec <span id="num"></span> cases</h1>
+        <canvas id="canvas" width="1000" height="1000"></canvas>
+    </section>
+    <section class="settings">
+        <div style="padding: 5px;">
+            <h1>Paramètres</h1>
+            <form action="">
+            <label for="number">Nombres</label>
+            <input type="number" name="number" id="number">
+            <div class="colorDiv">
+                <label for="ccolor">Case color</label>
+                <input type="color" name="ccolor" id="ccolor">
+                <label for="mcolor">Mark color</label>
+                <input type="color" name="mcolor" id="mcolor">
+            </div>
+            <button onclick="setParams(event)">Generate</button>
+        </form>
+        </div>
+        <button onclick="exportToPNG()" class="export">Exporter</button>
+    </section>
+</body>
+</html>
